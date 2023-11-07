@@ -12,7 +12,7 @@ class Home extends BaseController
     public function index()
     {
         echo view('header');
-        echo view('menu');
+        echo view('login');
         echo view('footer');
     }
     public function dashboard()
@@ -70,16 +70,15 @@ class Home extends BaseController
     }
     public function user()
     {
-        if (session()->get('level') == 1) {
-            $model = new M_model();
-            $on = 'user.id_user=level.id_level';
-            // $on1 = 'data_murid.lombaa=data_lomba.id_lomba';
-            $data['vuser'] = $model->join2('user', 'level', $on);
-            echo view('header');
-            echo view('menu');
-            echo view('tabel_user', $data);
-            echo view('footer');
-        }
+        // if (session()->get('level') == 1) {
+        $model = new M_model();
+        $on = 'user.id_user=level.id_level';
+        // $on1 = 'data_murid.lombaa=data_lomba.id_lomba';
+        $data['vuser'] = $model->join2('user', 'level', $on);
+        echo view('header');
+        echo view('menu');
+        echo view('tabel_user', $data);
+        echo view('footer');
     }
     public function reset($id)
     {

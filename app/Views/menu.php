@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<style>
-    .brand-title img {
-        margin-top: -20px;
-    }
-</style>
-
 <body>
 
     <!--*******************
@@ -33,13 +25,12 @@
         ***********************************-->
         <div class="nav-header">
             <div class="brand-logo">
-                <a href="index.html">
+                <a href="dashboard">
+                    <b class="logo-abbr"><img src="/images/logo-text-small.png" height="40" alt=""> </b>
                     <!-- <b class="logo-abbr"><img src="../images/logo-text-large.png" alt="" width="100" height="100"></b> -->
-                    <span class="logo-compact"><img src="../images/logo-compact-large.png" alt="" width="50"
-                            height="50"></span>
-                    <span class="brand-title">
-                        <img src="../images/logo-text-large.png" alt="" width="100" height="70"></span>
-                </a>
+                    <span class="logo-compact"><img src="/images/logo-text-large.png" alt="" width="50"
+                            height="50"></span> <span class="brand-title"> <img src="../images/logo-text-large.png"
+                            alt="" width="80" height="50"></span> </a>
             </div>
         </div>
         <!--**********************************
@@ -75,8 +66,8 @@
                 <div class="header-right">
                     <ul class="clearfix">
                         <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
-                                <i class="mdi mdi-email-outline"></i>
-                                <span class="badge badge-pill gradient-1">3</span>
+                                <!-- <i class="mdi mdi-email-outline"></i> -->
+                                <!-- <span class="badge badge-pill gradient-1">3</span> -->
                             </a>
                             <div class="drop-down animated fadeIn dropdown-menu">
                                 <div class="dropdown-content-heading d-flex justify-content-between">
@@ -139,8 +130,8 @@
                             </div>
                         </li>
                         <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
-                                <i class="mdi mdi-bell-outline"></i>
-                                <span class="badge badge-pill gradient-2">3</span>
+                                <!-- <i class="mdi mdi-bell-outline"></i> -->
+                                <!-- <span class="badge badge-pill gradient-2">3</span> -->
                             </a>
                             <div class="drop-down animated fadeIn dropdown-menu dropdown-notfication">
                                 <div class="dropdown-content-heading d-flex justify-content-between">
@@ -212,7 +203,7 @@
                         <li class="icons dropdown">
                             <div class="user-img c-pointer position-relative" data-toggle="dropdown">
                                 <span class="activity active"></span>
-                                <img src="images/user/1.png" height="40" width="40" alt="">
+                                <img src="/../images/user/darrell-removebg-preview.png" height="40" width="40" alt="">
                             </div>
                             <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
                                 <div class="dropdown-content-body">
@@ -253,26 +244,32 @@
         <div class="nk-sidebar">
             <div class="nk-nav-scroll">
                 <ul class="metismenu" id="menu">
-                    <!-- <li class="nav-label">Dashboard</li> -->
+                    <li class="nav-label">Dashboard</li>
                     <li>
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-speedometer menu-icon"></i><span class="nav-text">Tabel Data</span>
+                            <i class="icon-speedometer menu-icon"></i><span class="nav-text">Data Tabel</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="/home/user">Data User</a></li>
+                            <li><a href="user">Tabel User</a></li>
                             <!-- <li><a href="./index-2.html">Home 2</a></li> -->
                         </ul>
                     </li>
+                    <!-- </ul>
                     </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-layers menu-icon"></i><span class="nav-text">Components</span>
+                        </a>
+                        <ul aria-expanded="false"> -->
                 </ul>
                 </li>
                 </ul>
             </div>
         </div>
-
         <!--**********************************
             Sidebar end
         ***********************************-->
-        <!-- #/ container -->
-        <!--**********************************-->
-    </div>
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
