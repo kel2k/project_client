@@ -32,6 +32,11 @@ class Home extends BaseController
         echo view('change_password', $data);
         echo view('footer');
     }
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to('/Home');
+    }
     public function aksi_changepassword()
     {
         $model = new M_model();
@@ -43,7 +48,7 @@ class Home extends BaseController
         );
         // print_r($password);
         $model->qedit('user', $data1, $where);
-        return redirect()->to('/home/dashboard/');
+        return redirect()->to('/home/index/');
     }
     public function aksi_login()
     {

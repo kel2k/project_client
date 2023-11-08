@@ -209,67 +209,61 @@
                                 <div class="dropdown-content-body">
                                     <ul>
                                         <li>
-                                            <a href="app-profile.html"><i class="icon-user"></i>
-                                                <span>Profile</span></a>
+                                            <a href="/home/gantipassword"><i class="icon-user"></i>
+                                                <span>Change Password</span></a>
                                         </li>
-                                        <li>
-                                            <a href="javascript:void()">
-                                                <i class="icon-envelope-open"></i> <span>Inbox</span>
-                                                <div class="badge gradient-3 badge-pill gradient-1">3</div>
-                                            </a>
-                                        </li>
-
-                                        <hr class="my-2">
-                                        <li>
-                                            <a href="page-lock.html"><i class="icon-lock"></i> <span>Lock
-                                                    Screen</span></a>
-                                        </li>
-                                        <li><a href="page-login.html"><i class="icon-key"></i> <span>Logout</span></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                         </li>
+                        <li><a href="/home/logout"><i class="icon-key"></i> <span>Logout</span></a>
+                        </li>
+                        <hr class="my-2">
+                        <li>
+                            <a href="page-lock.html"><i class="icon-lock"></i> <span>Lock
+                                    Screen</span></a>
+
                     </ul>
                 </div>
             </div>
+            </li>
+            </ul>
         </div>
-        <!--**********************************
+    </div>
+    </div>
+    <!--**********************************
             Header end ti-comment-alt
         ***********************************-->
 
-        <!--**********************************
+    <!--**********************************
             Sidebar start
         ***********************************-->
-        <div class="nk-sidebar">
-            <div class="nk-nav-scroll">
-                <ul class="metismenu" id="menu">
-                    <li class="nav-label">Dashboard</li>
-                    <li>
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-speedometer menu-icon"></i><span class="nav-text">Data Tabel</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="user">Tabel User</a></li>
-                            <!-- <li><a href="./index-2.html">Home 2</a></li> -->
-                        </ul>
-                    </li>
-                    <!-- </ul>
+    <div class="nk-sidebar">
+        <div class="nk-nav-scroll">
+            <ul class="metismenu" id="menu">
+                <li class="nav-label">Dashboard</li>
+                <li>
+                    <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <i class="icon-speedometer menu-icon"></i><span class="nav-text">Data Tabel</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="user">Tabel User</a></li>
+                        <!-- <li><a href="./index-2.html">Home 2</a></li> -->
+                    </ul>
+                </li>
+                <!-- </ul>
                     </li>
                     <li>
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="icon-layers menu-icon"></i><span class="nav-text">Components</span>
                         </a>
                         <ul aria-expanded="false"> -->
-                </ul>
-                </li>
-                </ul>
-            </div>
+            </ul>
+            </li>
+            </ul>
         </div>
-        <!--**********************************
+    </div>
+    <!--**********************************
             Sidebar end
         ***********************************-->
 
-        <!--**********************************
+    <!--**********************************
             Content body start
         ***********************************-->

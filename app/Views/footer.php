@@ -25,9 +25,15 @@
 
 
 <script src="<?= base_url() ?>/js/dashboard/dashboard-1.js"></script>
-<script src="<?= base_url() ?>plugins/tables/js/jquery.dataTables.min.js"></script>
+<script src="<?= base_url() ?>/plugins/tables/js/jquery.dataTables.min.js"></script>
 <script src="<?= base_url() ?>/plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
-<script src="<?= base_url() ?>plugins/tables/js/datatable-init/datatable-basic.min.js"></script>
+<script src="<?= base_url() ?>/plugins/tables/js/datatable-init/datatable-basic.min.js"></script>
+<script src="<?= base_url() ?>/plugins/jquery-steps/build/jquery.steps.min.js"></script>
+<script src="<?= base_url() ?>/plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="<?= base_url() ?>/js/plugins-init/jquery-steps-init.js"></script>
+<script src="<?= base_url() ?>/plugins/jquery-steps/build/jquery.steps.min.js"></script>
+<script src="<?= base_url() ?>/plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="<?= base_url() ?>/js/plugins-init/jquery-steps-init.js"></script>
 </body>
 
 </html>
