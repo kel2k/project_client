@@ -34,7 +34,8 @@
 <script src="<?= base_url() ?>/plugins/jquery-steps/build/jquery.steps.min.js"></script>
 <script src="<?= base_url() ?>/plugins/jquery-validation/jquery.validate.min.js"></script>
 <script src="<?= base_url() ?>/js/plugins-init/jquery-steps-init.js"></script>
-
+<script src="<?= base_url() ?>/plugins/sweetalert/js/sweetalert.min.js"></script>
+<script src="<?= base_url() ?>/plugins/sweetalert/js/sweetalert.init.js"></script>
 
 </body>
 

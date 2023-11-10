@@ -29,8 +29,8 @@
                     <b class="logo-abbr"><img src="/images/logo-text-small.png" height="40" alt=""> </b>
                     <!-- <b class="logo-abbr"><img src="../images/logo-text-large.png" alt="" width="100" height="100"></b> -->
                     <span class="logo-compact"><img src="/images/logo-text-large.png" alt="" width="50"
-                            height="50"></span> <span class="brand-title"> <img src="../images/logo-text-large.png"
-                            alt="" width="80" height="50"></span> </a>
+                            height="50"></span> <span class="brand-title"> <img src="/images/logo-text-large.png" alt=""
+                            width="80" height="50"></span> </a>
             </div>
         </div>
         <!--**********************************
@@ -245,7 +245,7 @@
                     </a>
                     <ul aria-expanded="false">
                         <li><a href="user">Tabel User</a></li>
-                        <!-- <li><a href="./index-2.html">Home 2</a></li> -->
+                        <li><a href="siswa">Tabel Murid</a></li>
                     </ul>
                 </li>
                 <!-- </ul>

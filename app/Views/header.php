@@ -14,7 +14,7 @@
         href="<?= base_url('../plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css') ?>">
     <!-- Custom Stylesheet -->
     <link href=<?= base_url('plugins/tables/css/datatable/dataTables.bootstrap4.min.css') ?> rel="stylesheet">
-    <link href="<?= base_url() ?>/css/style.css" rel="stylesheet">
-    <link href="<?= base_url() ?>/plugins/jquery-steps/css/jquery.steps.css" rel="stylesheet">
     <link href="<?= base_url() ?>/plugins/sweetalert/css/sweetalert.css" rel="stylesheet">
+    <link href="<?= base_url() ?>/css/style.css" rel="stylesheet">
+
 </head>
