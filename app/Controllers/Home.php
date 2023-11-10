@@ -80,10 +80,10 @@ class Home extends BaseController
         $on = 'user.id_user=level.id_level';
         // $on1 = 'data_murid.lombaa=data_lomba.id_lomba';
         $data['vuser'] = $model->join2('user', 'level', $on);
-        echo view('header');
-        echo view('menu');
+        // echo view('header');
+        // echo view('menu');
         echo view('tabel_user', $data);
-        echo view('footer');
+        // echo view('footer');
     }
     public function reset($id)
     {

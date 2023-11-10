@@ -14,6 +14,8 @@
                                         <th>Password</th>
                                         <th>Email</th>
                                         <th>Level</th>
+                                        <th>Created At</th>
+                                        <th>Updated At</th>
                                         <th>Status</th>
                                     </tr>
                                 </thead>
@@ -36,6 +38,12 @@
                                         </td>
                                         <td>
                                             <?php echo $k->nm_level ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $k->created_at ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $k->updated_at ?>
                                         </td>
                                         <td>
                                             <a href="<?= base_url('/home/reset/' . $k->id_user) ?>"><button
