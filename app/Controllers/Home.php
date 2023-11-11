@@ -17,9 +17,11 @@ class Home extends BaseController
     }
     public function dashboard()
     {
+        $model = new M_model();
+        $data['totalUsers'] = $model->getTotalUsers();
         echo view('header');
         echo view('menu');
-        echo view('dashboard');
+        echo view('dashboard', $data);
         echo view('footer');
     }
     public function gantipassword()
@@ -76,12 +78,11 @@ class Home extends BaseController
     }
     public function user()
     {
-        // if (session()->get('level') == 1) {
         $model = new M_model();
         $on = 'user.level=level.id_level';
-        // $on2 = 'user.id_user=siswa.user_id';
-        // $on1 = 'data_murid.lombaa=data_lomba.id_lomba';
+
         $data['vuser'] = $model->join2('user', 'level', $on);
+
         echo view('header');
         echo view('menu');
         echo view('tabel_user', $data);
@@ -96,6 +97,17 @@ class Home extends BaseController
         echo view('header');
         echo view('menu');
         echo view('tabel_siswa', $data);
+        echo view('footer');
+    }
+    public function staf()
+    {
+        // if (session()->get('level') == 1) {
+        $model = new M_model();
+        $on = 'staf.user_id=user.id_user';
+        $data['vstaf'] = $model->join2('staf', 'user', $on);
+        echo view('header');
+        echo view('menu');
+        echo view('tabel_staf', $data);
         echo view('footer');
     }
     public function reset($id)
@@ -164,6 +176,62 @@ class Home extends BaseController
         $model->simpan('siswa', $siswa);
         return redirect()->to('/home/user');
     }
+    public function addstaf()
+    {
+        $model = new M_model();
+
+        $data['user'] = $model->tampil('user');
+        echo view('header');
+        echo view('menu');
+        echo view('add_staf', $data);
+        echo view('footer');
+    }
+    public function aksi_addstaf()
+    {
+        $model = new M_model();
+        // $on='guru.user = user.id_user';
+        $username = $this->request->getPost('username');
+        $password = $this->request->getPost('password');
+        $nama = $this->request->getPost('nama');
+        $email = $this->request->getPost('email');
+        $alamat = $this->request->getPost('alamat');
+        $tanggal_lahir = $this->request->getPost('tanggal_lahir');
+        $tempat_lahir = $this->request->getPost('tempat_lahir');
+        $no_tlp = $this->request->getPost('no_tlp');
+        $level = $this->request->getPost('level');
+        $created_by = $this->request->getPost('created_by');
+        $jenis_kelamin = $this->request->getPost('jenis_kelamin');
+
+        $user = array(
+            'username' => $username,
+            'password' => md5('password'),
+            'email' => $email,
+            'level' => '3',
+            'created_at' => date('Y-m-d H:i:s'),
+            'created_by' => session()->get('id')
+        );
+
+        $model = new M_model();
+        $model->simpan('user', $user);
+
+        $where = array('username' => $username);
+        $id = $model->getWhere2('user', $where);
+        $id_user = $id['id_user'];
+        $staf = array(
+            'user_id' => $id_user,
+            'nama' => $nama,
+            'alamat' => $alamat,
+            'tanggal_lahir' => $tanggal_lahir,
+            'tempat_lahir' => $tempat_lahir,
+            'jenis_kelamin' => $jenis_kelamin,
+            'no_tlp' => $no_tlp,
+            'created_at' => date('Y-m-d H:i:s'),
+            'created_by' => session()->get('id')
+        );
+        // print_r($siswa);
+        $model->simpan('staf', $staf);
+        return redirect()->to('/home/staf');
+    }
     public function editsiswa($id)
     {
         // if (session()->get('level') == 1) {
@@ -210,6 +278,54 @@ class Home extends BaseController
         //    print_r($id);
         // //  print_r($data2);
         $model->qedit('siswa', $data2, $where2);
+        return redirect()->to('/home/siswa');
+    }
+    public function editstaf($id)
+    {
+        // if (session()->get('level') == 1) {
+
+        $model = new M_model();
+        $on = 'staf.user_id=user.id_user';
+        $where = array(
+            'user_id' => $id
+        );
+        $data['staf'] = $model->joinW('staf', 'user', $on, $where);
+        echo view('header');
+        echo view('menu');
+        echo view('edit_staf', $data);
+        echo view('footer');
+
+
+        // } else {
+        //     return redirect()->to('/home/dashboard');
+        // }
+    }
+    public function aksi_editstaf()
+    {
+        $model = new M_model();
+        // $on='guru.user = user.id_user';
+        $id = $this->request->getPost('id');
+        $nama = $this->request->getPost('nama');
+        $alamat = $this->request->getPost('alamat');
+        $tanggal_lahir = $this->request->getPost('tanggal_lahir');
+        $tempat_lahir = $this->request->getPost('tempat_lahir');
+        $no_tlp = $this->request->getPost('no_tlp');
+        $level = $this->request->getPost('level');
+        $created_by = $this->request->getPost('created_by');
+        $jenis_kelamin = $this->request->getPost('jenis_kelamin');
+        $where2 = array('user_id' => $id);
+        $data2 = array(
+            'nama' => $nama,
+            'alamat' => $alamat,
+            'tanggal_lahir' => $tanggal_lahir,
+            'tempat_lahir' => $tempat_lahir,
+            'jenis_kelamin' => $jenis_kelamin,
+            'no_tlp' => $no_tlp,
+            'staf_updated_at' => date('Y-m-d H:i:s')
+        );
+        //    print_r($id);
+        // //  print_r($data2);
+        $model->qedit('staf', $data2, $where2);
         return redirect()->to('/home/siswa');
     }
 }

@@ -4,16 +4,20 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">User Data Table</h4>
+                        <h4 class="card-title">Data Table Seksi Sarana</h4>
+                        <button class="btn btn-primary mb-2" data-toggle="tooltip" data-placement="bottom"
+                            title="Add a new user" onclick="window.location.href='/home/addstaf'">Add Staf</button>
                         <div class="table-responsive">
                             <table class="table table-striped table-bordered zero-configuration">
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Username</th>
-                                        <th>Password</th>
-                                        <th>Email</th>
-                                        <th>Level</th>
+                                        <th>Nama Seksi Sarana</th>
+                                        <th>Alamat</th>
+                                        <th>Tanggal Lahir</th>
+                                        <th>Tempat Lahir</th>
+                                        <th>Jenis Kelamin</th>
+                                        <th>No Telfon</th>
                                         <th>Created At</th>
                                         <th>Updated At</th>
                                         <th>Created By</th>
@@ -22,37 +26,43 @@
                                 </thead>
                                 <?php
                                 $no = 1;
-                                foreach ($vuser as $k) {
+                                foreach ($vstaf as $k) {
                                     ?>
                                     <tr>
                                         <td>
                                             <?php echo $no++ ?>
                                         </td>
                                         <td>
-                                            <?php echo $k->username ?>
+                                            <?php echo $k->nama ?>
                                         </td>
                                         <td>
-                                            <?php echo $k->password ?>
+                                            <?php echo $k->alamat ?>
                                         </td>
                                         <td>
-                                            <?php echo $k->email ?>
+                                            <?php echo $k->tanggal_lahir ?>
                                         </td>
                                         <td>
-                                            <?php echo $k->nm_level ?>
+                                            <?php echo $k->tempat_lahir ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $k->jenis_kelamin ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $k->no_tlp ?>
                                         </td>
                                         <td>
                                             <?php echo $k->created_at ?>
                                         </td>
                                         <td>
-                                            <?php echo $k->updated_at ?>
+                                            <?php echo $k->staf_updated_at ?>
                                         </td>
                                         <td>
                                             <?php echo $k->created_by ?>
                                         </td>
                                         <td>
-                                            <button class="btn btn-danger" onclick="confirmReset(<?= $k->id_user ?>)"
-                                                data-toggle="tooltip" data-placement="bottom"
-                                                title="Reset user password">Reset</button>
+                                            <a href="<?php echo base_url('/home/editstaf/' . $k->user_id) ?>"><button
+                                                    class="btn btn-warning" data-toggle="tooltip" data-placement="bottom"
+                                                    title="Click to edit">Edit</button></a>
                                         </td>
                                     </tr>
                                     <?php
@@ -67,25 +77,3 @@
     </div>
     <!-- #/ container -->
     <!--**********************************-->
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        function confirmReset(userId) {
-            Swal.fire({
-                title: 'Confirmation',
-                text: 'Are you sure you want to reset this user\'s password?',
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes',
-                cancelButtonText: 'No'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    // If the user clicks "Yes"
-                    window.location.href = `/home/reset/${userId}`;
-                }
-            });
-        }
-    </script>
-</div>

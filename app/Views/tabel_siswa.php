@@ -5,6 +5,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Data Table Murid</h4>
+                        <button class="btn btn-primary mb-2" data-toggle="tooltip" data-placement="bottom"
+                            title="Add a new user" onclick="window.location.href='/home/adduser'">Add Murid</button>
                         <div class="table-responsive">
                             <table class="table table-striped table-bordered zero-configuration">
                                 <thead>

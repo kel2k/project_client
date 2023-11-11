@@ -170,4 +170,8 @@ class M_model extends Model
 
         return $builder->get()->getResultArray(); // Mengambil semua data dari tabel
     }
+    public function getTotalUsers()
+    {
+        return $this->db->table('user')->countAll();
+    }
 }

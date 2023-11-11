@@ -1,5 +1,29 @@
 <body>
+    <style>
+        /* dashboard.css (contoh) atau gunakan gaya CSS di dalam tag <style> */
+        .profile-section {
+            text-align: center;
+            margin-top: 20px;
+        }
 
+        .profile-image {
+            width: 100px;
+            /* Sesuaikan dengan ukuran yang diinginkan */
+            height: 100px;
+            /* Sesuaikan dengan ukuran yang diinginkan */
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            /* Efek bayangan */
+        }
+
+        .username {
+            font-size: 13px;
+            /* Sesuaikan dengan ukuran yang diinginkan */
+            margin-top: 10px;
+            /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
+            /* Efek bayangan teks */
+        }
+    </style>
     <!--*******************
         Preloader start
     ********************-->
@@ -187,23 +211,26 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="icons dropdown d-none d-md-flex">
+                        <!-- <li class="icons dropdown d-none d-md-flex">
                             <a href="javascript:void(0)" class="log-user" data-toggle="dropdown">
                                 <span>English</span> <i class="fa fa-angle-down f-s-14" aria-hidden="true"></i>
-                            </a>
-                            <div class="drop-down dropdown-language animated fadeIn  dropdown-menu">
+                            </a> -->
+                        <!-- <div class="drop-down dropdown-language animated fadeIn  dropdown-menu">
                                 <div class="dropdown-content-body">
-                                    <ul>
-                                        <li><a href="javascript:void()">English</a></li>
-                                        <li><a href="javascript:void()">Dutch</a></li>
-                                    </ul>
+                                    <ul> -->
+                        <!-- <li><a href="javascript:void()">English</a></li> -->
+                        <!-- <li><a href="javascript:void()">Dutch</a></li> -->
+                        <!-- </ul>
                                 </div>
-                            </div>
-                        </li>
+                            </div> -->
+                        <!-- </li> -->
                         <li class="icons dropdown">
                             <div class="user-img c-pointer position-relative" data-toggle="dropdown">
-                                <span class="activity active"></span>
                                 <img src="/../images/user/darrell-removebg-preview.png" height="40" width="40" alt="">
+                                <!-- <span class="activity active"></span> -->
+                                <span class="username">
+                                    <?php echo session()->get('username') ?>
+                                </span>
                             </div>
                             <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
                                 <div class="dropdown-content-body">
@@ -212,58 +239,60 @@
                                             <a href="/home/gantipassword"><i class="icon-user"></i>
                                                 <span>Change Password</span></a>
                                         </li>
+                                        <li>
+                                            <a href="/home/logout"><i class="icon-key"></i> <span>Logout</span></a>
+                                        </li>
+                                        <hr class="my-2">
+                                        <li>
+                                            <a href="page-lock.html"><i class="icon-lock"></i> <span>Lock
+                                                    Screen</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </li>
-                        <li><a href="/home/logout"><i class="icon-key"></i> <span>Logout</span></a>
-                        </li>
-                        <hr class="my-2">
-                        <li>
-                            <a href="page-lock.html"><i class="icon-lock"></i> <span>Lock
-                                    Screen</span></a>
 
                     </ul>
                 </div>
             </div>
-            </li>
-            </ul>
         </div>
-    </div>
-    </div>
-    <!--**********************************
+        <!--**********************************
             Header end ti-comment-alt
         ***********************************-->
 
-    <!--**********************************
+        <!--**********************************
             Sidebar start
         ***********************************-->
-    <div class="nk-sidebar">
-        <div class="nk-nav-scroll">
-            <ul class="metismenu" id="menu">
-                <li class="nav-label">Dashboard</li>
-                <li>
-                    <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                        <i class="icon-speedometer menu-icon"></i><span class="nav-text">Data Tabel</span>
-                    </a>
-                    <ul aria-expanded="false">
-                        <li><a href="user">Tabel User</a></li>
-                        <li><a href="siswa">Tabel Murid</a></li>
-                    </ul>
-                </li>
-                <!-- </ul>
+        <div class="nk-sidebar">
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li class="nav-label">Dashboard</li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-speedometer menu-icon"></i><span class="nav-text">Data Tabel</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="user">Tabel User</a></li>
+                            <li><a href="siswa">Tabel Murid</a></li>
+                            <li><a href="staf">Tabel Staf</a></li>
+                        </ul>
+                    </li>
+                    <!-- </ul>
                     </li>
                     <li>
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="icon-layers menu-icon"></i><span class="nav-text">Components</span>
                         </a>
                         <ul aria-expanded="false"> -->
-            </ul>
-            </li>
-            </ul>
+                </ul>
+                </li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <!--**********************************
+        <!--**********************************
             Sidebar end
         ***********************************-->
 
-    <!--**********************************
+        <!--**********************************
             Content body start
         ***********************************-->
